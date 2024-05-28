@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../FSF-PT-EAST-APRIL-040824"
+		},
+		{
+			"path": "../pickashoe"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "butter_project3"
+	}
+}
