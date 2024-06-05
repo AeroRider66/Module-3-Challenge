@@ -17,7 +17,7 @@ const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
 //  function nameInput()  {
 
-    //keep doing while user selects to add more employees
+    //keep doing while user selects to add more employees   
     while (addNew)  {
       let firstName = prompt("Enter employee's first name", "first-name");
 
@@ -25,10 +25,67 @@ const collectEmployees = function() {
       //console.log(empLastName);
 
       let strgSalary = prompt("Enter employee's salary", "salary");
+      //console.log(typeof(strgSalary));
       
+      let numCheck = true;
+      while (numCheck) {
+        if (isNaN(strgSalary)) {
+          numCheck = true;
+        }
+        else {
+          return strgSalary;
+        }
+      }
+
+      //numCheck();
+
+      // function numCheck() {
+      //   if (typeof(strgSalary === "number")) {
+      //     console.log("Type",typeof(strgSalary));  
+      //     return;
+      //   }
+      //   else {
+      //     alert("not a number");
+      //     strgSalary = 0;
+      //     return
+      //   }
+      // }
+      // numCheck = true;
+      //   while (numCheck) {
+      //     if (isNaN(strgSalary)) {
+      //       alert('Not a number');
+      //       salary = 0;
+      //     } 
+      //     else {};
+      //   }
+          
+      // function whatCheck() {
+      //   if (typeof(strgSalary === "number")) {
+      //     console.log("Type",typeof(strgSalary));  
+      //     return;
+      //   }
+      //   else {
+      //     salary = 0;
+      //   }
+      // }
+
+
+    //   let strgSalary = prompt("Enter employee's salary", "salary");
+    //   function numCheck() {
+    //     if (typeof(strgSalary === "number")) {
+    //       console.log("Type",typeof(strgSalary));  
+    //       return;
+    //     }
+    //     else {
+    //       salary = 0;
+    //     }
+    //   }
+
       // unary plus (+) operator method for string to number conversion from
       // https://www.sitepoint.com/convert-string-to-number-javascript/
       let salary = +strgSalary;
+
+
 
       //define object employee
       let employee = {firstName, lastName, salary};
@@ -61,7 +118,7 @@ const displayAverageSalary = function(employeesArray) {
     salarySum += employeesArray[i].salary;
   }
   let averageSalary = salarySum / (employeesArray.length);
-  console.log(averageSalary);
+  console.log("Average salary: ",averageSalary);
   
   return averageSalary;
 }
@@ -69,7 +126,7 @@ const displayAverageSalary = function(employeesArray) {
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // const employeesArray = ["aaa", "bbb", "ccc", "ddd"];
-  // console.log(employeesArray);
+  console.log(employeesArray);
 
   function getRandomIntInclusive()  {
     const min = 0;
@@ -85,9 +142,13 @@ const getRandomEmployee = function(employeesArray) {
     return mathResult;
   }
   //getRandomIntInclusive();
+
   console.log("randomInt",getRandomIntInclusive());
-  return getRandomIntInclusive;
+  let x = getRandomIntInclusive;
+  getRandomEmployee(employees)
+  return  employeesArray[x];
 }
+//return 
   // getRandomIntInclusive();
   // console.log(getRandomIntInclusive());
     //Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);

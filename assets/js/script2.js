@@ -1,3 +1,9 @@
+
+
+//*********************************************************** */
+//  WHAT MAKES THIS FILE DIFFFERENT?  Answer that or delete it..
+
+
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
@@ -17,7 +23,7 @@ const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
 //  function nameInput()  {
 
-    //keep doing while user selects to add more employees
+    //keep doing while user selects to add more employees   
     while (addNew)  {
       let firstName = prompt("Enter employee's first name", "first-name");
 
@@ -25,7 +31,9 @@ const collectEmployees = function() {
       //console.log(empLastName);
 
       let strgSalary = prompt("Enter employee's salary", "salary");
+      //console.log(typeof(strgSalary));
       
+
       // unary plus (+) operator method for string to number conversion from
       // https://www.sitepoint.com/convert-string-to-number-javascript/
       let salary = +strgSalary;
@@ -61,7 +69,7 @@ const displayAverageSalary = function(employeesArray) {
     salarySum += employeesArray[i].salary;
   }
   let averageSalary = salarySum / (employeesArray.length);
-  console.log(averageSalary);
+  console.log("Average salary: ",averageSalary);
   
   return averageSalary;
 }
@@ -69,7 +77,7 @@ const displayAverageSalary = function(employeesArray) {
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // const employeesArray = ["aaa", "bbb", "ccc", "ddd"];
-  // console.log(employeesArray);
+  console.log(employeesArray);
 
   function getRandomIntInclusive()  {
     const min = 0;
@@ -85,9 +93,13 @@ const getRandomEmployee = function(employeesArray) {
     return mathResult;
   }
   //getRandomIntInclusive();
+
   console.log("randomInt",getRandomIntInclusive());
-  return getRandomIntInclusive;
+  let x = getRandomIntInclusive;
+  getRandomEmployee(employees)
+  return  employeesArray[x];
 }
+//return 
   // getRandomIntInclusive();
   // console.log(getRandomIntInclusive());
     //Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
