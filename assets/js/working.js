@@ -67,27 +67,24 @@ const displayAverageSalary = function(employeesArray) {
 }
 
 // Select a random employee
-const getRandomEmployee = function(employeesArray) {
+const getRandomEmployee = function(generateNumber) {
   // const employeesArray = ["aaa", "bbb", "ccc", "ddd"];
   // console.log(employeesArray);
 
-  function getRandomIntInclusive()  {
+  function generateNumber(employeesArray)  {
     const min = 0;
     const max = (employeesArray.length);
-    console.log("min",min);
-    console.log("max",max);
     const minCeiled = Math.ceil(min);
-    // console.log("ceil",minCeiled);
     const maxFloored = Math.floor(max);
-    // console.log("floor",maxFloored);
     const mathResult = Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
-    console.log("result",mathResult);
-    return mathResult;
+    console.log("result",employeesArray[mathResult]);
+    return employeesArray[mathResult];
   }
-  //getRandomIntInclusive();
-  console.log("randomInt",getRandomIntInclusive());
-  return getRandomIntInclusive;
-}
+  //COMMMENTED OUT getRandomIntInclusive();
+  // console.log("randomInt",getRandomIntInclusive());
+  // return getRandomIntInclusive());
+  //END
+
   // getRandomIntInclusive();
   // console.log(getRandomIntInclusive());
     //Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
@@ -99,7 +96,7 @@ const getRandomEmployee = function(employeesArray) {
   //     employeesArray[2] = "ccc";
       // "aaa", "bbb", "ccc", "ddd"];
   // TODO: Select and display a random employee
-
+}
 /*
   ====================
   STARTER CODE
@@ -148,6 +145,7 @@ const trackEmployeeData = function() {
   console.table(employees);
 
   displayAverageSalary(employees);
+  console.log("avg sal", averageSalary);
 
   console.log('==============================');
 

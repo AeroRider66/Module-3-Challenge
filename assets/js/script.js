@@ -15,7 +15,7 @@ const collectEmployees = function() {
   //console.log(typeof salary);
 
   // TODO: Get user input to create and return an array of employee objects
-//  function nameInput()  {
+  //  function nameInput()  {
 
     //keep doing while user selects to add more employees
     while (addNew)  {
