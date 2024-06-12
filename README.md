@@ -64,6 +64,10 @@ This generates a random number and returns the employee’s first name and last 
 
 ## Deployment and Repository
 The repository for this application is located at URL:
+https://github.com/AeroRider66/Module-3-Challenge
+
+Deployed page URL:
+
 
  
  
