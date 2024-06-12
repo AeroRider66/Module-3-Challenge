@@ -67,6 +67,7 @@ The repository for this application is located at URL:
 https://github.com/AeroRider66/Module-3-Challenge
 
 Deployed page URL:
+https://aerorider66.github.io/Module-3-Challenge/
 
 
  
