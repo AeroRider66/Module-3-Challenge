@@ -3,10 +3,11 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 addEmployeesBtn.addEventListener('click', function() {});
 //collectEmployees);
+const employeesArray = [];
 // Collect employee data (requires external input)
 const collectEmployees = function() {
   //define empolyeeArray as an empty array
-  const employeesArray = [];
+  //const employeesArray = [];
 
   //set the user "add more" flag to true for the first time through
   let addNew = true;
@@ -51,6 +52,8 @@ const collectEmployees = function() {
 return employeesArray;
 }
 
+
+
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
@@ -61,43 +64,38 @@ const displayAverageSalary = function(employeesArray) {
     salarySum += employeesArray[i].salary;
   }
   let averageSalary = salarySum / (employeesArray.length);
-  console.log(averageSalary);
-  
+  //console.log("The average salary of our employees is : $", averageSalary);
+  console.log(`The average salary of our employees is $ ${averageSalary}.`);
   return averageSalary;
 }
 
 // Select a random employee
-const getRandomEmployee = function(employeesArray) {
-  // const employeesArray = ["aaa", "bbb", "ccc", "ddd"];
-  // console.log(employeesArray);
 
-  function getRandomIntInclusive()  {
+const getRandomEmployee = function(employeesArray) {
+  //function getRandomIntInclusive()  {
     const min = 0;
     const max = (employeesArray.length);
-    console.log("min",min);
-    console.log("max",max);
+    //console.log("min",min);
+    //console.log("max",max);
     const minCeiled = Math.ceil(min);
     // console.log("ceil",minCeiled);
     const maxFloored = Math.floor(max);
     // console.log("floor",maxFloored);
     const mathResult = Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
-    console.log("result",mathResult);
-    return mathResult;
-  }
-  //getRandomIntInclusive();
-  console.log("randomInt",getRandomIntInclusive());
-  return getRandomIntInclusive;
+    //console.log("Int result",mathResult);
+    //return the employee with index mathResult;
+    let combinedName = employeesArray[mathResult].firstName + " " + employeesArray[mathResult].lastName;
+    console.log(`Congratulations to our random lottery winner, ${combinedName}!`);
+
+    return combinedName;
+
 }
-  // getRandomIntInclusive();
-  // console.log(getRandomIntInclusive());
-    //Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
+//const randomEmployeeFirst = getRandomEmployee(firstName, lastName);
+//console.log("Congratulations to ", randomEmployeeFirst);
+  // const randomEmployee = employeesArray[randomInt];
+  // return randomEmployee;
 
 
-  // const employeesArray = [];
-  //     employeesArray[0] = "aaa";
-  //     employeesArray[1] = "bbb";
-  //     employeesArray[2] = "ccc";
-      // "aaa", "bbb", "ccc", "ddd"];
   // TODO: Select and display a random employee
 
 /*
